@@ -1,39 +1,13 @@
-"use client";   
+import Navbar from "./Components/Navbar";
 
-import { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import {app} from "../utils/firebase"; 
 
-export default function Page() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSignup = async () => {
-    try {
-      const auth = getAuth(app);
-      await createUserWithEmailAndPassword(auth, email, password);
-      alert("User created!");
-    } catch (error) {
-      console.error(error);
-     
-    }
-  };
-
+export default function Home() {
   return (
-    <div>
-      <input
-        type="email"
-        placeholder="Enter email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Enter password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSignup}>Sign Up</button>
-    </div>
+    <main>
+      <Navbar/>
+      <div className="p-6 text-center">
+        <h1 className="text-3xl font-bold">Welcome to Bu.fi Tickter 🎫</h1>
+      </div>
+    </main>
   );
 }

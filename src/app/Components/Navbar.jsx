@@ -5,19 +5,19 @@ import { FaUserCircle, FaHeart } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState(null); // null → not logged in
-  const [formType, setFormType] = useState("signin"); // signin / signup
+  const [user, setUser] = useState(null);
+  const [formType, setFormType] = useState("signin");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Dummy login → replace with Firebase/Auth API
+    
     setUser({ name: "there!" });
     setIsOpen(false);
   };
 
   const handleSignup = (e) => {
     e.preventDefault();
-    // Dummy signup
+
     setUser({ name: "" });
     setIsOpen(false);
   };
@@ -29,12 +29,12 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-black text-white shadow-md">
-      {/* Logo */}
+      
       <h1 className="text-2xl font-bold">
         <span className="text-yellow-400">Bu.fi</span> tickter
       </h1>
 
-      {/* Search Bar */}
+      
       <div className="flex items-center">
         <input
           type="text"

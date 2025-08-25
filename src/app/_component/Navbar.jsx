@@ -46,7 +46,7 @@ export default function Navbar() {
     type="text"
     placeholder="Search for events and activities"
     // 
-    className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+    className="w-full pl-10 pr-8 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
 
   />
 </div>

@@ -68,6 +68,7 @@
       
 
 
+<<<<<<< HEAD
 // {isOpen && (
 //   <Modal onClose={() => setIsOpen(false)}>
 //     {user ? (
@@ -147,6 +148,41 @@
 //     )}
 //   </Modal>
 // )}
+=======
+      <div className="relative w-160">
+  <IoMdSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-500" size={24} />
+  <input
+    type="text"
+    placeholder="Search for events and activities"
+    // 
+    className="w-full pl-10 pr-8 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+
+  />
+</div>
+
+    
+      <div className="flex items-center gap-4">
+        <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg">
+          Create Event
+        </button>
+      </div>  
+        
+      <div className="flex items-center gap-4">
+  {/* Outlined Heart Icon */}
+  <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
+    <FaRegHeart size={24} className="text-yellow-400 cursor-pointer" />
+  </div>
+
+  {/* Outlined User Icon */}
+  <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
+    <FaRegUser
+      size={26}
+      className="text-yellow-400 cursor-pointer"
+      onClick={() => setIsOpen(!isOpen)}
+    />
+  </div>
+</div>
+>>>>>>> e1734adfa94eb4fa1010903070b762120343c9ca
 
 
 //       {/* Dropdown */}

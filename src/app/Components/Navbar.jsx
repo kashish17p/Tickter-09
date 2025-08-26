@@ -3,11 +3,13 @@
 "use client";
 import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
-import { FaRegUser, FaRegHeart } from "react-icons/fa";
+import { FaRegUser,} from "react-icons/fa";
 import LoginForm from "./loginForm";
 import SignupForm from "./SignupForm";
 import Modal from "./Modal";
-// 
+import Image from "next/image";
+
+
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
 
 
@@ -60,14 +62,20 @@ export default function Navbar() {
       {/* Icons */}
       <div className="flex items-center gap-8">
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
-          <FaRegHeart size={28} className="text-yellow-400 cursor-pointer" />
+          {/* <FaRegHeart size={28} className="text-yellow-400 cursor-pointer" /> */}
+          <Image src="/heart.svg" alt="Heart Icon" width={24} height={24} />
+          
+
+
+
         </div>
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
           <FaRegUser
-            size={28}
+            size={25}
             className="text-yellow-400 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           />
+          
         </div>
       </div>
       

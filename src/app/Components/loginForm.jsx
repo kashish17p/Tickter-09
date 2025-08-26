@@ -18,7 +18,7 @@ export default function LoginForm({ onLogin, switchToSignup }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
-        className="w-full p-2 border rounded mb-2"
+        className="w-full p-5 border rounded mb-6"
       />
       <input
         type="password"

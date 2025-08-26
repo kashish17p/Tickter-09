@@ -1,23 +1,27 @@
 "use client";
 import { useState } from "react";
-import { FaUserCircle, FaHeart } from "react-icons/fa";
+// import { FaUserCircle, FaHeart } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
+// import { FaRegHeart } from "react-icons/fa"; 
+import { FaRegUser, FaRegHeart } from "react-icons/fa";
+
 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState(null); // null → not logged in
-  const [formType, setFormType] = useState("signin"); // signin / signup
+  const [user, setUser] = useState(null);
+  const [formType, setFormType] = useState("signin");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Dummy login → replace with Firebase/Auth API
+    
     setUser({ name: "there!" });
     setIsOpen(false);
   };
 
   const handleSignup = (e) => {
     e.preventDefault();
-    // Dummy signup
+
     setUser({ name: "" });
     setIsOpen(false);
   };
@@ -28,36 +32,49 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-black text-white shadow-md">
-      {/* Logo */}
-      <h1 className="text-2xl font-bold">
-        <span className="text-yellow-400">Bu.fi</span> tickter
-      </h1>
-
-      {/* Search Bar */}
-      <div className="flex items-center">
-        <input
-          type="text"
-          placeholder="Search for events and activities"
-          className="px-4 py-2 rounded-l-lg text-black"
-        />
-        <button className="bg-yellow-400 px-4 py-2 rounded-r-lg">
-          🔍
-        </button>
+    <nav className="flex justify-between items-center px-10 py-4 bg-black text-white shadow-md">
+      
+      <div className="flex items-center space-x-2 mb-6">
+        <h1 className="text-5xl font-bold text-yellow-500">Bu.fi</h1>
+        <h1 className="text-5xl font-bold text-grey-300">tickter</h1>
       </div>
 
-      {/* Right Side Buttons */}
+
+      <div className="relative w-160">
+  <IoMdSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-500" size={24} />
+  <input
+    type="text"
+    placeholder="Search for events and activities"
+    // 
+    className="w-full pl-10 pr-8 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+
+  />
+</div>
+
+    
       <div className="flex items-center gap-4">
         <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg">
           Create Event
         </button>
-        <FaHeart size={24} className="cursor-pointer" />
-        <FaUserCircle
-          size={28}
-          className="cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-        />
-      </div>
+      </div>  
+        
+      <div className="flex items-center gap-4">
+  {/* Outlined Heart Icon */}
+  <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
+    <FaRegHeart size={24} className="text-yellow-400 cursor-pointer" />
+  </div>
+
+  {/* Outlined User Icon */}
+  <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
+    <FaRegUser
+      size={26}
+      className="text-yellow-400 cursor-pointer"
+      onClick={() => setIsOpen(!isOpen)}
+    />
+  </div>
+</div>
+
+
 
       {/* Dropdown (Profile / Auth Forms) */}
       {isOpen && (

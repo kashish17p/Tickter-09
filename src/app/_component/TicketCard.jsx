@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/app/Components/TicketCard.jsx
 
 "use client";
 import React, { useState } from "react";
@@ -119,16 +118,3 @@ export default function TicketCard() {
     </div>
   );
 }
-=======
-import React from 'react'
-
-const TicketCard = () => {
-  return (
-    <div>
-      knj
-    </div>
-  )
-}
-
-export default TicketCard
->>>>>>> 0702e6ecd02a4a59e9554fc4659bd284df1403ad:src/app/_component/TicketCard.jsx

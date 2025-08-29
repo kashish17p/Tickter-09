@@ -34,9 +34,9 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-10 py-4 bg-black text-white shadow-md">
       
-      <div className="flex items-center space-x-2 mb-6">
+      <div className="flex items-center space-x-2 mb-1">
         <h1 className="text-5xl font-bold text-yellow-500">Bu.fi</h1>
-        <h1 className="text-5xl font-bold text-grey-300">tickter</h1>
+        <h1 className="text-5xl font-bold text-outline-fill">tickter</h1>
       </div>
 
 
@@ -46,7 +46,7 @@ export default function Navbar() {
     type="text"
     placeholder="Search for events and activities"
     // 
-    className="w-full pl-10 pr-8 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+    className="w-full pl-55 pr-8 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
 
   />
 </div>

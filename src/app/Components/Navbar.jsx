@@ -8,8 +8,6 @@ import LoginForm from "./loginForm";
 import SignupForm from "./SignupForm";
 import Modal from "./Modal";
 import Image from "next/image";
-
-
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
 
 
@@ -66,9 +64,8 @@ export default function Navbar() {
           <Image src="/heart.svg" alt="Heart Icon" width={24} height={24} />
           
 
-
-
         </div>
+        
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
           <FaRegUser
             size={25}
@@ -209,9 +206,11 @@ export default function Navbar() {
                 />
               )}
             </div>
+            
           )}
         </div>
       )}
+      
     </nav>
   );
 }

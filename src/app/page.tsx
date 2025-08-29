@@ -1,6 +1,6 @@
 import Navbar from "./Components/Navbar";
 import TicketCard from "./Components/TicketCard";
-
+ import LocationSearch from "./Components/Location";
 export default function Home() {
   return (
     <main>
@@ -9,6 +9,13 @@ export default function Home() {
         
       </div>
       <TicketCard />
+      
+      <div className="flex justify-center mt-10">
+  <LocationSearch />
+</div>
+
+
+      
     </main>
   );
 }

@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
@@ -7,9 +5,7 @@ import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import LoginForm from "./loginForm";
 import SignupForm from "./SignupForm";
 import Modal from "./Modal";
-// 
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

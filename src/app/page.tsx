@@ -1,5 +1,6 @@
 import Navbar from "./Components/Navbar";
 import TicketCard from "./Components/TicketCard";
+import DestinationBar from "./Components/DestinationBar";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="p-6 text-center">
         
       </div>
+      <DestinationBar />
       <TicketCard />
       
     </main>

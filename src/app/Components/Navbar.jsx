@@ -34,15 +34,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 bg-black text-white shadow-md">
-      {/* Logo */}
+    <nav className="flex justify-between items-center px-10 py-4  text-white shadow-md">
       <div className="flex items-center space-x-2 mb-1">
-        <span className="text-5xl font-bold text-yellow-500">Bu.fi</span>
-        <span className="text-5xl font-bold text-outline-yellow"> tickter</span>
+     <Image src='/logo.svg' alt="/logo" width={250} height={250}/>
 
       </div>
 
-      {/* Search Bar */}
       <div className="relative w-160">
         <IoMdSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-500" size={24} />
         <input

@@ -1,21 +1,13 @@
-import Navbar from "./Components/Navbar";
-import TicketCard from "./Components/TicketCard";
- import LocationSearch from "./Components/Location";
+import Navbar from "./components/Navbar";
+import UpcomingEvent from "./Components/UpcomingEvent";
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="p-6 text-center">
-        
+      <div className="p-6 text-left">
+        <h1 className="text-3xl font-bold">Upcoming Events </h1>
       </div>
-      <TicketCard />
-      
-      <div className="flex justify-center mt-10">
-  <LocationSearch />
-</div>
-
-
-      
+   <UpcomingEvent />
     </main>
   );
 }

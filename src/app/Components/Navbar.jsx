@@ -28,11 +28,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 bg-black text-white shadow-md">
+    <nav className="flex justify-between items-center px-10 py-4 text-white shadow-md">
       {/* Logo */}
       <div className="flex items-center space-x-2 mb-1">
         <span className="text-5xl font-bold text-yellow-500">Bu.fi</span>
-        <span className="text-5xl font-bold text-outline-yellow"> tickter</span>
+        <span className="text-5xl font-bold text-black"> tickter</span>
 
       </div>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
         <input
           type="text"
           placeholder="Search for events and activities"
-          className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+          className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-400 text-black text-base placeholder:text-sm font-bold placeholder:text-gray-400"
         />
       </div>
 
@@ -67,8 +67,6 @@ export default function Navbar() {
         </div>
       </div>
       
-
-
 {isOpen && (
   <Modal onClose={() => setIsOpen(false)}>
     {user ? (

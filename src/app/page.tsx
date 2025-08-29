@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="p-6 text-center">
+      <div className="text-center">
         
       </div>
       <DestinationBar />

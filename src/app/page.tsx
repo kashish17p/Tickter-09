@@ -1,5 +1,5 @@
-import Navbar from "./_component/Navbar";
-import UpcomingEvent from "./_component/UpcomingEvent";
+import Navbar from "./components/Navbar";
+import UpcomingEvent from "./Components/UpcomingEvent";
 export default function Home() {
   return (
     <main>

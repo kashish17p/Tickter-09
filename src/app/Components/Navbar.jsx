@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
-import { FaRegUser, FaRegHeart } from "react-icons/fa";
+import { FaRegUser,} from "react-icons/fa";
 import LoginForm from "./loginForm";
 import SignupForm from "./SignupForm";
 import Modal from "./Modal";
+import Image from "next/image";
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
 
 export default function Navbar() {
@@ -28,15 +29,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 text-white shadow-md">
-      {/* Logo */}
+    <nav className="flex justify-between items-center px-10 py-4  text-white shadow-md">
       <div className="flex items-center space-x-2 mb-1">
-        <span className="text-5xl font-bold text-yellow-500">Bu.fi</span>
-        <span className="text-5xl font-bold text-black"> tickter</span>
+     <Image src='/logo.svg' alt="/logo" width={250} height={250}/>
 
       </div>
 
-      {/* Search Bar */}
       <div className="relative w-160">
         <IoMdSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-500" size={24} />
         <input
@@ -56,14 +54,19 @@ export default function Navbar() {
       {/* Icons */}
       <div className="flex items-center gap-8">
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
-          <FaRegHeart size={28} className="text-yellow-400 cursor-pointer" />
+          {/* <FaRegHeart size={28} className="text-yellow-400 cursor-pointer" /> */}
+          <Image src="/heart.svg" alt="Heart Icon" width={24} height={24} />
+          
+
         </div>
+        
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center border-yellow-400">
           <FaRegUser
-            size={28}
+            size={25}
             className="text-yellow-400 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           />
+          
         </div>
       </div>
       
@@ -195,9 +198,15 @@ export default function Navbar() {
                 />
               )}
             </div>
+            
           )}
         </div>
       )}
+      
     </nav>
   );
 }
+
+
+
+

@@ -14,7 +14,7 @@ export default function DestinationBar() {
         <div>
          <h2 className="text-xl font-bold text-black">Bundelkhand University</h2>
          <p className="text-black text-sm">
-            Bundelkhand campus Jhansi, near Shivaji nagar
+            Bundelkhand campus Jhansi, near Shivaji nagar.......
          </p>
         </div>
         </div> 

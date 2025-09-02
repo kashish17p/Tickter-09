@@ -7,7 +7,7 @@ import SignupForm from "./SignupForm";
 import Modal from "./Modal";
 import Image from "next/image";
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
-import { Menu, X } from "lucide-react";
+
 
 
 
@@ -33,6 +33,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav className="flex justify-between items-center px-10 md:px-12 py-4  text-white shadow-md">
       <div className="flex items-center space-x-2 mb-1">
      <Image src='/logo.svg' alt="/logo" width={250} height={250}/>
@@ -44,7 +45,7 @@ export default function Navbar() {
          <input
             type="text"
             placeholder="Search for events and activities"
-            className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-400 text-black text-base placeholder:text-sm font-bold placeholder:text-gray-400"
+            className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm font-bold placeholder:text-gray-400"
           />
       </div>
       
@@ -212,5 +213,18 @@ export default function Navbar() {
       )}
       
     </nav>
+    {/* Mobile Searchbar at Bottom */}
+   <div className="md:hidden px-4 py-2 bg-white shadow-inner z-40 w-full">
+     <div className="relative">
+       <IoMdSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-500" size={24} />
+       < input
+        type="text"
+        placeholder="Search for events and activities"
+        className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-400 text-black font-semibold placeholder:text-sm"
+       />
+     </div>
+   </div>
+   </>
+
   );
 }

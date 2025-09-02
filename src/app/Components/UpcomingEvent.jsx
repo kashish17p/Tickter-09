@@ -116,7 +116,7 @@ const UpcomingEvent = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="flex justify-center mt-4 space-x-2">
           {events.map((_, i) => (
             <button

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
+
 export default function LocationSearch() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
@@ -11,24 +12,48 @@ export default function LocationSearch() {
     
   };
 
-  const places = ["Manik chowk", "Rajendra Nagar", "Boring Road"];
+  const places = [
+  { name: "Manik chowk", distance: "5 km", time: "15 mins" },
+  { name: "Rajendra Nagar", distance: "8 km", time: "25 mins" },
+  { name: "Civil Lines", distance: "12 km", time: "35 mins" },
+   ];
 
   return (
     <div className="flex justify-center mt-10">
-         <Image src="/Group" alt="Location" width={100} height={100}/>
+         
+
+         
           {/* Search Section */}
-          <div className="bg-white rounded-2xl p-6 shadow-md w-[500px]">
+          <div className=" relative bg-gray-200 rounded-3xl p-13 shadow-md w-[600px]">
+            
+            <Image 
+  src="/location.svg" 
+  alt="Location" 
+  width={80} 
+  height={80} 
+  className="absolute top-[-40px] left-1/2 transform -translate-x-1/2"
+  />
+
         {/* Detect + OR + Input */}
-        <div className="flex items-center gap-4 justify-center mb-6">
-          <button className="bg-black text-white px-4 py-2 rounded-full font-semibold">
+        <div className="flex items-center justify-center gap-6 mb-6">
+          <button className="bg-black text-white px-4 py-2 rounded-full font-normal w-80">
             Detect my Location
-            <div className="text-xs font-normal">Using GPS</div>
+            <div className="text-[8px] font-normal">Using GPS</div>
           </button>
-          <span className="text-gray-500 font-normal">or</span>
+          <div className="text-black font-normal">
+            
+            <svg width="40" height="40">
+            <circle cx="20" cy="20" r="18" stroke="#ccc" strokeWidth="2" fill="white" />
+            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" fontSize="16" fill="#333">or</text>
+            </svg>
+
+            </div>
+
+
           <input
             type="text"
             placeholder="manik chowk"
-            className="px-4 py-2 border rounded-full outline-none w-48 placeholder:text-sm placeholder:text-gray-500 text-gray-800"
+            className="bg-white px-4 py-2 rounded-full outline-none w-55 placeholder:text-sm placeholder:text-gray-500 text-gray-800"
           />
         </div>
 
@@ -37,16 +62,17 @@ export default function LocationSearch() {
           {places.map((place, i) => (
             <div
               key={i}
-              className="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-lg shadow-sm"
+              className="flex items-center justify-between bg-gray-50 px-4 py-2 rounded-lg shadow-sm"
             >
               <div>
-                <div className="font-bold text-black">{place}</div>
-                <div className="text-gray-500 text-sm">
-                  5 km away &bull; 15 mins
+                <div className="font-bold text-black">{place.name}</div>
+                <div className="text-black text-xs">
+                  {place.distance} away &bull; {place.time}
+                  
                 </div>
               </div>
               <button
-                onClick={() => handleSelect(place)}
+                onClick={() => handleSelect(place.name)}
                 className="bg-black text-white px-4 py-1 rounded-md hover:bg-gray-800"
               >
                 Select

@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
@@ -9,7 +7,6 @@ import SignupForm from "./SignupForm";
 import Modal from "./Modal";
 import Image from "next/image";
 import { BiEnvelope, BiLockAlt, BiUser } from "react-icons/bi";
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +40,7 @@ export default function Navbar() {
         <input
           type="text"
           placeholder="Search for events and activities"
-          className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-300 text-black text-base placeholder:text-sm placeholder:text-gray-400"
+          className="w-full pl-55 pr-4 py-2 rounded-lg border border-gray-400 text-black text-base placeholder:text-sm font-bold placeholder:text-gray-400"
         />
       </div>
 
@@ -73,8 +70,6 @@ export default function Navbar() {
         </div>
       </div>
       
-
-
 {isOpen && (
   <Modal onClose={() => setIsOpen(false)}>
     {user ? (
@@ -211,3 +206,7 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+
